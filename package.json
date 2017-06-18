@@ -1,0 +1,17 @@
+{
+  "name": "taiwan-id",
+  "version": "1.0.0",
+  "description": "Taiwan ID checker and generator.",
+  "main": "dist/taiwan-id.min.js",
+  "repository": "https://github.com/tonytonyjan/taiwan-id",
+  "scripts": {
+    "build": "mkdir -p dist && uglifyjs index.js -cmo dist/taiwan-id.min.js",
+    "test": "mocha"
+  },
+  "author": "Jian Weihang",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "uglify-es": "^3.0.17"
+  }
+}
