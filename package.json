@@ -1,6 +1,6 @@
 {
   "name": "taiwan-id",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Taiwan ID checker and generator.",
   "main": "dist/taiwan-id.min.js",
   "repository": "https://github.com/tonytonyjan/taiwan-id",
