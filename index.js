@@ -9,18 +9,33 @@ const REGEX = /^[A-Z]\d{9}$/;
 (function(exports){
   exports.check = function (id) {
     if(!id.match(REGEX)) return false;
-    numbers = MAP[id[0]].concat(id.split('').slice(1, 10).map(c => +c))
-    let sum = 0, i = 11;
-    while(i--) sum += numbers[i] * MULTIPLIER[i];
+    let sum = MAP[id[0]][0] * MULTIPLIER[0] +
+      MAP[id[0]][1] * MULTIPLIER[1] +
+      id[1] * MULTIPLIER[2] +
+      id[2] * MULTIPLIER[3] +
+      id[3] * MULTIPLIER[4] +
+      id[4] * MULTIPLIER[5] +
+      id[5] * MULTIPLIER[6] +
+      id[6] * MULTIPLIER[7] +
+      id[7] * MULTIPLIER[8] +
+      id[8] * MULTIPLIER[9] +
+      id[9] * MULTIPLIER[10];
     return sum % 10 == 0;
   }
   exports.generate = function () {
     let keys = Object.keys(MAP),
         key = keys[Math.random() * keys.length << 0],
-        numbers = MAP[key].concat(('' + (Math.random() * 20000000 + 10000000 << 0))
-                          .split('').map(c => +c));
-    let sum = 0, i = 10;
-    while(i--) sum += numbers[i] * MULTIPLIER[i];
-    return key + numbers.concat((10 - sum % 10) % 10).slice(2,11).join('');
+        id = key + (Math.random() * 20000000 + 10000000 << 0);
+    let sum = MAP[key][0] * MULTIPLIER[0] +
+      MAP[key][1] * MULTIPLIER[1] +
+      id[1] * MULTIPLIER[2] +
+      id[2] * MULTIPLIER[3] +
+      id[3] * MULTIPLIER[4] +
+      id[4] * MULTIPLIER[5] +
+      id[5] * MULTIPLIER[6] +
+      id[6] * MULTIPLIER[7] +
+      id[7] * MULTIPLIER[8] +
+      id[8] * MULTIPLIER[9];
+    return id + ((10 - sum % 10) % 10);
   }
 })(typeof exports === 'undefined' ? this.TaiwanIdChecker = {} : exports);

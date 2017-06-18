@@ -6,11 +6,13 @@
   "repository": "https://github.com/tonytonyjan/taiwan-id",
   "scripts": {
     "build": "mkdir -p dist && uglifyjs index.js -cmo dist/taiwan-id.min.js",
-    "test": "mocha"
+    "test": "mocha",
+    "bench": "node bench"
   },
   "author": "Jian Weihang",
   "license": "MIT",
   "devDependencies": {
+    "benchmark": "^2.1.4",
     "mocha": "^3.4.2",
     "uglify-es": "^3.0.17"
   }

@@ -14,3 +14,9 @@ TaiwanId.check('A123456789'); // true
 var randomId = TaiwanId.generate();
 TaiwanId.check(randomId); // true
 ```
+
+## Benchmark
+
+```
+env SUIT=check npm run bench
+```
