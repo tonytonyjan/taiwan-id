@@ -1,5 +1,4 @@
-# Taiwan ID
-
+# Taiwan ID [![Build Status](https://travis-ci.org/tonytonyjan/taiwan-id.svg?branch=master)](https://travis-ci.org/tonytonyjan/taiwan-id)
 
 ## Installation
 
